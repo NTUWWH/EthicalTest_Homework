@@ -51,7 +51,16 @@ def answer():
     if ans == "true":
         return(render_template("wrong.html"))
     else:
-        return(render_template("correct.html"))
+        return(render_template("ethical_test2.html"))
+
+@app.route("/answer2", methods=["GET", "POST"])
+def answer2():
+    ans = request.form["options"]
+    print(ans)
+    if ans == "true":
+        return(render_template("wrong.html"))
+    else:
+        return(render_template("true.html"))
     
 @app.route("/end",methods=["GET","POST"])    
 def end():  
